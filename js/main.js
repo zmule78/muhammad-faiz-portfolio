@@ -17,4 +17,17 @@ const currentPage=window.location.pathname.split('/').pop()||'index.html';
 document.querySelectorAll('.nav-link').forEach(link=>{link.classList.toggle('active',link.getAttribute('href')===currentPage)});
 
 // Portfolio filter
-document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.filter;document.querySelectorAll('.portfolio-card').forEach(card=>{if(filter==='all'||card.dataset.category===filter){card.style.display='block'}else{card.style.display='none'}})})});
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter=btn.dataset.filter;
+    document.querySelectorAll('.portfolio-card').forEach(card=>{
+      if(filter==='all'||card.dataset.category===filter){
+        card.style.display='';
+      } else {
+        card.style.display='none';
+      }
+    });
+  });
+});
