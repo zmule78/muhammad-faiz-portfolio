@@ -1,1 +1,21 @@
 @media(max-width:767px){.hamburger{display:flex}.nav{position:fixed;top:0;right:-100%;width:75%;height:100vh;background:var(--color-bg-primary);box-shadow:-2px 0 10px rgba(0,0,0,.1);transition:right .3s ease;padding:80px 32px 32px;z-index:999}.nav.active{right:0}.nav-list{flex-direction:column;gap:24px}.nav-link{font-size:1.1rem}h1{font-size:1.75rem}h2{font-size:1.5rem}.footer-inner{flex-direction:column;gap:16px;text-align:center}:root{--section-padding:48px 0}.hero{min-height:auto;padding-top:90px;padding-bottom:48px}.hero-inner{grid-template-columns:1fr;gap:32px;text-align:center}.hero h1{font-size:1.875rem}.hero-photo{max-width:280px;height:320px}.hero-buttons{justify-content:center}.hero-image{order:-1}.stats-grid{grid-template-columns:repeat(2,1fr);padding:40px 20px}.skills-grid{grid-template-columns:repeat(2,1fr)}.achievements-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.experience-grid{grid-template-columns:1fr}.awards-grid{grid-template-columns:1fr}.certs-grid{grid-template-columns:repeat(2,1fr)}.portfolio-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}@media(min-width:768px)and (max-width:1199px){h1{font-size:2rem}h2{font-size:1.625rem}:root{--section-padding:64px 0;--content-padding:0 32px}.hero-inner{gap:40px}.hero h1{font-size:2.25rem}.hero-photo{max-width:340px;height:400px}.stats-grid{grid-template-columns:repeat(4,1fr)}.skills-grid{grid-template-columns:repeat(2,1fr)}.achievements-grid{grid-template-columns:repeat(2,1fr)}.awards-grid{grid-template-columns:repeat(2,1fr)}.certs-grid{grid-template-columns:repeat(2,1fr)}.portfolio-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1200px){:root{--section-padding:100px 0;--content-padding:0 40px}h1{font-size:2.75rem}}
+
+/* Publications page mobile responsive */
+@media(max-width:767px){
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr !important}
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr !important}
+  .skills-grid[style*="grid-template-columns"]{grid-template-columns:1fr !important}
+  [style*="display:flex;flex-direction:column;gap:24px"] > div{padding:20px !important}
+  .skills-grid{grid-template-columns:1fr !important}
+  .stats-grid{grid-template-columns:repeat(2,1fr) !important}
+  .logo img{height:56px !important;max-height:56px}
+  .footer-inner{flex-direction:column;gap:16px;text-align:center}
+  .footer::before{display:none}
+  .cta-buttons{flex-direction:column;align-items:center}
+  .cta-buttons .btn{width:100%;text-align:center}
+}
+@media(min-width:768px) and (max-width:1023px){
+  .skills-grid[style*="grid-template-columns"]{grid-template-columns:repeat(2,1fr) !important}
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr) !important}
+  .logo img{height:70px !important;max-height:70px}
+}
