@@ -25,9 +25,11 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{
     document.querySelectorAll('.portfolio-card').forEach(card=>{
       if(filter==='all'||card.dataset.category===filter){
         card.style.display='';
+        card.classList.add('aos-animate');
       } else {
         card.style.display='none';
       }
     });
+    if(typeof AOS!=='undefined') AOS.refresh();
   });
 });
